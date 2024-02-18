@@ -8,6 +8,7 @@ Code that converts the strings from META's earnings press release into a standar
 
 ### How to ?
 - Use this utility: ```python main.py```
+- Run the test case: ```python3 -m tests.test_extraction```
 
 ### Sample Output
 ```

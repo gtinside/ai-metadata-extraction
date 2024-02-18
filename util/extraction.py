@@ -3,8 +3,8 @@ from openai import OpenAI
 from assets.metadata import MayBeMetadata
 
 class ExtractionHelper:
-    def __init__(self):
-        self.instructor = instructor.patch(OpenAI())
+    def __init__(self, openai):
+        self.instructor = instructor.patch(openai)
 
     
     def extract_metadata(self, text) -> MayBeMetadata: # type: ignore
