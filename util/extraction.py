@@ -4,7 +4,7 @@ from assets.metadata import MayBeMetadata
 
 class ExtractionHelper:
     def __init__(self, openai):
-        self.instructor = instructor.patch(openai)
+        self.instructor = instructor.patch(OpenAI())
 
     
     def extract_metadata(self, text) -> MayBeMetadata: # type: ignore

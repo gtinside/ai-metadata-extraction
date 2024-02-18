@@ -1,6 +1,6 @@
 import json
+from openai import OpenAI
 from util.extraction import ExtractionHelper
-import json
 
 
 def extract_metadata():
@@ -19,7 +19,7 @@ def extract_metadata():
     """
     with open('earnings/earnings.json') as file:
         data = json.load(file)
-    extraction = ExtractionHelper()
+    extraction = ExtractionHelper(OpenAI())
     metadata = extraction.extract_metadata(",".join(data))
     print(metadata.result)
 
