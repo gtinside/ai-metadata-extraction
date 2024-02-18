@@ -6,6 +6,12 @@ from assets.metadata import MayBeMetadata
 class TestExtractionHelper(unittest.TestCase):
     @patch('util.extraction.instructor')
     def test_extract_metadata(self, mock_instructor):
+        """
+        The test test_extract_metadata in the TestExtractionHelper class is testing the 
+        extract_metadata method of the ExtractionHelper class. It is mocking the necessary 
+        dependencies and asserting that the method correctly calls the OpenAI API and returns 
+        the expected result.
+        """
         # Arrange
         mock_openai = Mock()
         mock_instructor.patch.return_value = mock_instructor
